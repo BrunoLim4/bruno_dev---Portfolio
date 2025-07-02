@@ -1,0 +1,341 @@
+/* Importação das fontes (adicione os arquivos na pasta public/fonts) */
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('../public/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inconsolata-Regular';
+  src: url('../public/fonts/Inconsolata-Regular.ttf') format('truetype');
+}
+
+/* Base e Animações */
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Splash Screen */
+.splash-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  animation: fadeOut 1.5s ease-out 2s forwards;
+}
+
+.splash-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* Cabeçalho */
+.header {
+  position: relative;
+  z-index: 10;
+  padding: 8px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.blur-background {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(30, 30, 30, 0.7);
+}
+
+.gradient-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 0;
+  background: linear-gradient(to right bottom, rgba(30,30,30,0.95), rgba(90,0,130,0.6));
+  box-shadow: 0 8px 30px rgba(155, 77, 255, 0.15);
+}
+
+.logo {
+  width: 250px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.bottom-border {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 4px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, transparent, #b268ff, #8a2be2, #b268ff, transparent);
+  opacity: 0.95;
+}
+
+/* Seção Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+  padding: 20px;
+  position: relative;
+  min-height: 250px; /* Garante espaço para os elementos */
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 250px; /* Para melhor responsividade */
+}
+
+.title {
+  margin-left: 10px;
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.highlight {
+  color: #8A2BE2;
+}
+
+.subtitle {
+  margin-left: 10px;
+  margin-top: 12px;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  font-family: 'Inconsolata-Regular', monospace;
+}
+
+.button-link {
+  text-decoration: none;
+}
+
+.button-gradient {
+  display: inline-block;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #8A2BE2, #B983FF);
+  padding: 12px 15px;
+  transition: transform 0.2s;
+}
+
+.button-gradient:hover {
+    transform: scale(1.05);
+}
+
+.button-text {
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Poppins-Regular', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-profile-container {
+    position: absolute;
+    right: 5%;
+    top: 20px;
+}
+
+.hero-profile {
+  width: 130px;
+  height: 180px;
+  border-radius: 16px;
+  border: 3px solid #8A2BE2;
+  background-color: #000;
+  box-shadow: 0 0 15px 5px rgba(138, 43, 226, 0.7);
+  overflow: hidden;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dev-name, .dev-role {
+  text-align: center;
+  font-family: 'Poppins-Regular', sans-serif;
+}
+
+.dev-name {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dev-role {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Seção de Tecnologias */
+.tech-section {
+  padding: 15px 20px;
+  text-align: center;
+  margin-top: 30px; /* Ajuste para o layout web */
+}
+
+.technologias {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.tech-icons-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.icon-wrapper {
+  animation: pulse 2s infinite ease-in-out;
+  filter: drop-shadow(0 4px 10px var(--shadow-color));
+}
+
+/* Seção de Projetos */
+.project-section {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Placeholder do Carrossel - Adapte para sua biblioteca */
+.carousel-placeholder {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.carousel-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+.carousel-image-item {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+/* Rodapé */
+.footer-container {
+  position: relative;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.footer-gradient-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #0d0d0d, #8000ff);
+  z-index: -1;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 32px;
+}
+
+.footer-logo {
+  width: 110px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.divider {
+  width: 1.5px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0 24px;
+  border-radius: 1px;
+}
+
+.social-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-button {
+  color: white;
+  transition: transform 0.2s;
+}
+
+.social-button:hover {
+  transform: scale(1.2);
+}
+
+/* Media Query para responsividade */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-content {
+        order: 2; /* Coloca o texto abaixo da imagem */
+    }
+    .hero-profile-container {
+        position: static;
+        order: 1; /* Coloca a imagem acima do texto */
+        margin-bottom: 20px;
+    }
+    .subtitle br {
+        display: none; /* Remove quebras de linha forçadas */
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .divider {
+        width: 80%;
+        height: 1.5px;
+    }
+}
