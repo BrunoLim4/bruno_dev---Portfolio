@@ -90,7 +90,7 @@ export default function App() {
                             Hello <span className="highlight">World</span>!
                         </h1>
                         <p className="subtitle">
-                            Sou desenvolvedor web especializado<br />em criar soluções modernas,<br />responsivas e de alta qualidade.
+                            Sou desenvolvedor web especializado<br /> em criar soluções modernas,<br />responsivas e de alta qualidade.
                         </p>
                         <a href="https://wa.me/5577988500087" target="_blank" rel="noopener noreferrer" className="button-link">
                             <div className="button-gradient">
